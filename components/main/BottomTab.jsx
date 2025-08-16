@@ -1,51 +1,56 @@
-import { View, Text, StyleSheet, Pressable,Image } from "react-native";
-import { Ionicons,Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+import { View, Text, StyleSheet, Pressable, Image } from "react-native";
+import { Ionicons, Feather } from "@expo/vector-icons";
+import { useRoute } from "@react-navigation/native";
 
 const colors = {
   primaryDark: "#FF685E",
 };
 
-export default function BottomTab({ active = "home", onTabPress }) {
+export default function BottomTab({ onTabPress }) {
+  const route = useRoute();
+  const currentRoute = route.name;
+
   const tabs = [
     {
-      key: "roadmap",
+      key: "Roadmap",
       label: "출산로드맵",
-      icon: <Image
-      source={require("../../assets/main/roadmap.png")}  
-      style={{ width: 25, height: 25, resizeMode: "contain" }}
-    />,
+      icon: (
+        <Image
+          source={require("../../assets/main/roadmap.png")}
+          style={{ width: 25, height: 25, resizeMode: "contain" }}
+        />
+      ),
     },
     {
-      key: "chat",
+      key: "Chat",
       label: "잼잼톡",
       icon: <Ionicons name="chatbubble-ellipses" size={25} color="#FF685E" />,
     },
     {
-      key: "home",
+      key: "Main",
       label: "홈",
-      icon: <Feather name="home" size={25} color="#fff"/>,
+      icon: <Feather name="home" size={25} color="#fff" />,
     },
     {
-      key: "center",
+      key: "Center",
       label: "센터 찾기",
-      icon: <Feather name="map-pin" size={20} color="#FF685E"/>,
+      icon: <Feather name="map-pin" size={20} color="#FF685E" />,
     },
     {
-      key: "my",
+      key: "MyPage",
       label: "마이페이지",
-      icon: <Feather name="user" size={20} color="#FF685E"/>,
+      icon: <Feather name="user" size={20} color="#FF685E" />,
     },
   ];
 
   return (
     <View style={styles.tabbar}>
       {tabs.map((tab) => {
-        const isActive = active === tab.key;
+        const isActive = currentRoute === tab.key;
 
         return (
           <Pressable key={tab.key} onPress={() => onTabPress(tab.key)}>
-            {isActive && tab.key === "home" ? (
-              // 홈 탭 강조 스타일
+            {isActive && tab.key === "Main" ? (
               <View style={styles.homeWrapper}>
                 {tab.icon}
                 <Text style={styles.homeText}>{tab.label}</Text>
@@ -97,11 +102,6 @@ const styles = StyleSheet.create({
   tabActiveText: {
     color: colors.primaryDark,
     fontWeight: "700",
-  },
-  homeLabel: {
-    fontSize: 10,
-    color: colors.primaryDark,
-    marginTop: 2,
   },
   homeWrapper: {
     backgroundColor: colors.primaryDark,
