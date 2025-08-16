@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Feather } from "@expo/vector-icons";
 import BottomTab from "./BottomTab";
 import { styles, colors } from "./style/Main.style";
+import MyPage from "./mypage/MyPage";
 
 export default function Main({ navigation }) {
   const userName = "수달프린스";  //수정해야함
@@ -73,7 +74,7 @@ export default function Main({ navigation }) {
                 <View style={{ flex: 1 }}>
                   <Text style={styles.inlineBannerTitle}>육아 설정 해주세요</Text>
                   <Pressable
-                    onPress={() => navigation.navigate("Profile")}
+                    onPress={() => navigation.navigate("MyPage")}
                     style={styles.inlineBannerCTA}
                   >
                     <Text style={styles.inlineBannerCTAText}>프로필 설정하러 가기</Text>

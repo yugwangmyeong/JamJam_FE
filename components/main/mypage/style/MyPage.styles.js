@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const COLORS = {
   bg: "#FDF2F5",
-  primary: "#FF685E",
+  primary: "#000000",
   text: "#222",
   subtext: "#8C8C8C",
   card: "#FFFFFF",
@@ -13,10 +13,11 @@ export const COLORS = {
 export const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: COLORS.bg },
   header: {
+    height: 56,
+    paddingHorizontal: 18,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 16,
-    paddingTop: 6,
+    justifyContent: "space-between",
   },
   headerLeft: { width: 40, height: 40, justifyContent: "center" },
   logo: {
