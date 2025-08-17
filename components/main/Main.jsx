@@ -8,7 +8,7 @@ import { styles, colors } from "./style/Main.style";
 import MyPage from "./mypage/MyPage";
 
 export default function Main({ navigation }) {
-  const userName = "수달프린스";  //수정해야함
+  const userName = "수달프린스";  //목업데이터
   const [showSetupBanner, setShowSetupBanner] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
   const goProfile = () => navigation.navigate("Profile");
@@ -44,7 +44,7 @@ export default function Main({ navigation }) {
         <View style={styles.heroArea}>
           {/* 인사 */}
           <Text style={styles.hello}>
-            <Text style={{ fontWeight: "700" }}>{userName}</Text> 님
+            <Text style={{ fontWeight: "700" }}>{userName}</Text> 님   {/*목업데이터 데이터연결해야함*/}
           </Text>
 
           {/* 말풍선 카드 */}
