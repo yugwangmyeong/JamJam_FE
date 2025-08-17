@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
     alignSelf: "stretch",
     height: 40,
     borderRadius: 999,
-    backgroundColor: "#F0B9C2",
+    backgroundColor: "#FF675D",
     alignItems: "center",
     justifyContent: "center",
     gap: 6,
@@ -99,4 +99,57 @@ export const styles = StyleSheet.create({
   ghostText: { color: COLORS.text, fontSize: 14 },
 
   dueText: { fontSize: 18, fontWeight: "900", color: COLORS.text },
+  dueCard: {
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    paddingVertical: 24,
+    paddingHorizontal: 18,
+    alignItems: "center",
+    shadowColor: "rgba(0,0,0,0.08)",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+    elevation: 4,
+    marginBottom: 20,
+  },
+  
+  dueBadge: {
+    position: "absolute",
+    top: 12,
+    backgroundColor: "#FF6B6B22",
+    paddingHorizontal: 52,
+    paddingVertical: 4,
+    borderRadius: 999,
+    marginBottom: 20,
+  },
+  
+  dueBadgeText: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#FF6B6B",
+  },
+  
+  dueImage: {
+    width: 140,
+    height: 110,
+    marginVertical: 16,
+  },
+  
+  dueDateText: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#222",
+  },
+  
+  dueDescription: {
+    fontSize: 15,
+    color: "#222",
+    marginTop: 6,
+  },
+  
+  dueHighlight: {
+    color: "#FF6B6B",
+    fontWeight: "900",
+  },
+  
 });

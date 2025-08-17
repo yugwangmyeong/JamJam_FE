@@ -4,7 +4,7 @@ import { Ionicons, Feather } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { styles, COLORS } from "./style/MyPage.styles";
 
-// 목업용 기본 데이터 (서버/스토리지 없으면 사용)
+// 목업용 기본 데이터 백엔드연결할때 삭제
 const DEFAULT_PROFILE = {
     nickname: "잼잼수달",
     email: "sudal1234@gmail.com",
@@ -108,11 +108,27 @@ export default function MyPage({ navigation }) {
 
                 {/* 출산 예정일 */}
                 {showDueDate && !!profile.dueDate && (
-                    <View style={styles.card}>
-                        <Text style={styles.label}>출산 예정일</Text>
-                        <Text style={styles.dueText}>{formatDotDate(profile.dueDate)}</Text>
+                    <View style={styles.dueCard}>
+                        <View style={styles.dueBadge}>
+                            <Text style={styles.dueBadgeText}>출산 예정일</Text>
+                        </View>
+
+                        <Image
+                            source={require("../../../assets/main/mypage/Happy baby-pana.png")} // ← 이미지 경로 맞게 수정
+                            style={styles.dueImage}
+                            resizeMode="contain"
+                        />
+
+                        <Text style={styles.dueDateText}>{formatDotDate(profile.dueDate)}</Text>
+
+                        <Text style={styles.dueDescription}>
+                            엄마를 만나기까지{" "}
+                            <Text style={styles.dueHighlight}>{daysUntil(profile.dueDate)}</Text>
+                            일 남았어요!
+                        </Text>
                     </View>
                 )}
+
 
                 <View style={{ height: 40 }} />
             </ScrollView>
@@ -142,5 +158,22 @@ function formatDotDate(yyyy_mm_dd) {
         return `${y}.${m}.${d}`;
     } catch (error) {
         return "—";
+    }
+}
+
+function daysUntil(dueDate) {
+    if (!dueDate) return "-";
+    try {
+        const target = new Date(dueDate);
+        const today = new Date();
+
+        // 시, 분, 초 제거
+        const t1 = new Date(target.getFullYear(), target.getMonth(), target.getDate()).getTime();
+        const t2 = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
+
+        const diff = Math.floor((t1 - t2) / (1000 * 60 * 60 * 24));
+        return diff;
+    } catch (e) {
+        return "-";
     }
 }
