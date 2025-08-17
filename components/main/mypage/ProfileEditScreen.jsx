@@ -69,7 +69,7 @@ export default function ProfileEditScreen({ navigation }) {
                         source={require("../../../assets/main/namelogo.png")}
                         style={{ width: 100, height: 40, resizeMode: "contain" }}
                     />
-                    <Feather name="bell" />
+                    <Feather name="bell" size={20} />
                 </View>
                 <View style={styles.divider} />
                 {/* 프로필 이미지 + 닉네임 */}

@@ -11,16 +11,14 @@ export default function Login({ navigation }) {
 
         <View style={styles.centerBox}>
           <Text style={[styles.tagline, { color: colors.brown }]}>
-            가볍게 껴안고, 함께하는 육아
+            가볍게 잼잼, 함께하는 육아
           </Text>
           <Image
             source={require("../../assets/Login/mainlogo.png")}
             style={styles.illo}
           />
         </View>
-
         <View style={{ flex: 1 }} />
-
         <View style={styles.buttonGroup}>
           <SocialButton
             variant="kakao"

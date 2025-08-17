@@ -12,14 +12,20 @@ export const COLORS = {
 
 export const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: COLORS.bg },
-
   header: {
+    height: 56,
+    paddingHorizontal: 18,
     flexDirection: "row",
+    justifyContent: "flex-end",
     alignItems: "center",
-    paddingHorizontal: 16,
-    paddingTop: 6,
+    position: "relative",
   },
-  headerLeft: { width: 40, height: 40, justifyContent: "center" },
+  headerCenter: {
+    position: "absolute",
+    left: 0, right: 0, top: 0, bottom: 0,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   logo: {
     flex: 1,
     textAlign: "center",
@@ -28,7 +34,7 @@ export const styles = StyleSheet.create({
     color: COLORS.primary,
   },
   saveBtn: { width: 40, alignItems: "flex-end" },
-  saveText: { color: COLORS.primary, fontWeight: "700" },
+  saveText: { color: COLORS.primary, fontWeight: "700", fontSize: 20 },
 
   container: { paddingHorizontal: 16, paddingBottom: 16 },
   title: {

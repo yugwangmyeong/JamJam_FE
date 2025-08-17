@@ -88,7 +88,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#F3F4F6",
     borderRadius: 8,
-    // ✅ 그림자 추가
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 9 },
     shadowOpacity: 0.08,

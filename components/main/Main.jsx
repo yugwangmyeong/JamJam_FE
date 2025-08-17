@@ -96,7 +96,7 @@ export default function Main({ navigation }) {
             <Feather name="chevron-right" size={20} color="#fff" />
           </Pressable>
 
-          <Pressable style={styles.outlineBtn} onPress={() => navigation?.navigate?.("Policy")}>
+          <Pressable style={styles.outlineBtn} onPress={() => navigation?.navigate?.("PolicyCurationOnboarding")}>
             <Text style={styles.outlineBtnText}>지원정책제도 신청하기</Text>
             <Feather name="chevron-right" size={20} color={colors.text} />
           </Pressable>
@@ -104,7 +104,7 @@ export default function Main({ navigation }) {
 
         {/* 두 개 타일 */}
         <View style={{ flexDirection: "row", gap: 12 }}>
-          <Pressable style={[styles.tile, { flex: 1 }]} onPress={() => navigation?.navigate?.("Test")}>
+          <Pressable style={[styles.tile, { flex: 1 }]} onPress={() => navigation?.navigate?.("JamJamTestIntro")}>
             <Image
               source={require("../../assets/main/test.png")}
               style={{ width: 80, height: 80, resizeMode: "contain" }}

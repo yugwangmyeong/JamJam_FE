@@ -7,6 +7,9 @@ import Main from "./components/main/Main";
 import ProfileScreen from "./components/login/ProfileScreen";
 import MyPage from "./components/main/mypage/MyPage";
 import ProfileEditScreen from "./components/main/mypage/ProfileEditScreen";
+import PolicyCurationOnboarding from "./components/main/policycuration/PolicyCurationOnboarding";
+import PolicyCurationQuestionScreen from "./components/main/policycuration/PolicyCurationQuestionScreen";
+import JamJamTestIntro from "./components/main/jamjam_test/JamJamTestIntro";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -19,6 +22,9 @@ export default function App() {
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="MyPage" component={MyPage} />
         <Stack.Screen name="ProfileEditScreen" component={ProfileEditScreen} />
+        <Stack.Screen name="PolicyCurationOnboarding" component={PolicyCurationOnboarding} />
+        <Stack.Screen name="PolicyCurationQuestionScreen" component={PolicyCurationQuestionScreen} />
+        <Stack.Screen name="JamJamTestIntro" component={JamJamTestIntro} />
       </Stack.Navigator>
     </NavigationContainer>
   );

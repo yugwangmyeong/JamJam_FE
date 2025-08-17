@@ -9,6 +9,7 @@ import {
   TextInput,
   Modal,
   Platform,
+  Image
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -61,15 +62,19 @@ export default function ProfileScreen() {
     <SafeAreaView style={styles.safe}>
       {/* Header */}
       <View style={styles.header}>
-        <Pressable style={styles.headerLeft}>
-          <Ionicons name="chevron-back" size={26} color={COLORS.primary} />
-        </Pressable>
-        <Text style={styles.logo}>육아잼잼</Text>
-        <Pressable onPress={saveProfile} style={styles.saveBtn}>
+        {/* 가운데 로고 (absolute 배치) */}
+        <View style={styles.headerCenter}>
+          <Image
+            source={require("../../assets/main/namelogo.png")}
+            style={{ width: 100, height: 40, resizeMode: "contain" }}
+          />
+        </View>
+
+        {/* 오른쪽 저장 버튼 */}
+        <Pressable onPress={saveProfile} style={styles.saveBtn} hitSlop={8}>
           <Text style={styles.saveText}>저장</Text>
         </Pressable>
       </View>
-
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.title}>프로필 입력하기</Text>
 
