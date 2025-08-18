@@ -30,7 +30,7 @@ export default function JamJamTestIntro({ navigation }) {
             {/* CTA Button */}
             <Pressable
                 style={styles.startBtn}
-                onPress={() => navigation.navigate("JamJamTestQuestion")}
+                onPress={() => navigation.navigate("JamJamTestScreen")}
             >
                 <Text style={styles.startText}>시작하기</Text>
             </Pressable>

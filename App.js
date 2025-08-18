@@ -10,6 +10,13 @@ import ProfileEditScreen from "./components/main/mypage/ProfileEditScreen";
 import PolicyCurationOnboarding from "./components/main/policycuration/PolicyCurationOnboarding";
 import PolicyCurationQuestionScreen from "./components/main/policycuration/PolicyCurationQuestionScreen";
 import JamJamTestIntro from "./components/main/jamjam_test/JamJamTestIntro";
+import JamJamTestScreen from "./components/main/jamjam_test/JamJamTestScreen";
+import CommunityHomeScreen from "./components/main/community/CommunityHomeScreen";
+import PostCreateScreen from "./components/main/community/PostCreateScreen";
+import PostDetailScreen from "./components/main/community/PostDetailScreen";
+import PostItem from "./components/main/community/PostItem";
+
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -25,6 +32,10 @@ export default function App() {
         <Stack.Screen name="PolicyCurationOnboarding" component={PolicyCurationOnboarding} />
         <Stack.Screen name="PolicyCurationQuestionScreen" component={PolicyCurationQuestionScreen} />
         <Stack.Screen name="JamJamTestIntro" component={JamJamTestIntro} />
+        <Stack.Screen name="JamJamTestScreen" component={JamJamTestScreen} />
+        <Stack.Screen name="CommunityHomeScreen" component={CommunityHomeScreen} />
+        <Stack.Screen name="PostDetail" component={PostDetailScreen} />
+        <Stack.Screen name="PostCreate" component={PostCreateScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

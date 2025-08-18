@@ -114,7 +114,7 @@ export default function Main({ navigation }) {
             <Feather name="chevron-right" size={26} color={colors.text} style={{ position: "absolute", right: 12, bottom: 12 }} />
           </Pressable>
 
-          <Pressable style={[styles.tile, { flex: 1 }]} onPress={() => navigation?.navigate?.("Community")}>
+          <Pressable style={[styles.tile, { flex: 1 }]} onPress={() => navigation?.navigate?.("CommunityHomeScreen")}>
             <Image
               source={require("../../assets/main/sudal.png")}
               style={{ width: 80, height: 80, resizeMode: "contain" }}

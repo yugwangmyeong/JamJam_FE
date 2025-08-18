@@ -108,7 +108,7 @@ export default function PolicyCurationQuestionScreen({ navigation }) {
           {/* 안내 문구 */}
           <View style={styles.chatBubbleLeft}>
             <Text style={styles.chatText}>
-              몇 가지 정보만 알려주시면{"\n"}수퍼잼스님께 딱 맞는 정책을 알려드릴게요
+              몇 가지 정보만 알려주시면{"\n"}잼잼수달님께 딱 맞는 정책을 알려드릴게요  
             </Text>
             <View style={styles.bubbleTailLeft} />
           </View>
